@@ -58,3 +58,6 @@ site-lisp/package/
 /projects
 /forge-*.sqlite
 /projectile.cache
+recentf.eld
+projects.eld
+projectile-frecency.eld
