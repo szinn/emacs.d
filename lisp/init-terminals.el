@@ -37,6 +37,20 @@
   (global-set-key (kbd "C-c t") 'sanityinc/eat-map))
 
 
+;; Ghostel: libghostty-vt based terminal.  On first use it offers to
+;; download a prebuilt native module.
+(when (maybe-require-package 'ghostel)
+  (defun sanityinc/ghostel-dwim (&optional arg)
+    "Open Ghostel in the project root if in a project, else `default-directory'.
+ARG is passed through to `ghostel-project' or `ghostel'."
+    (interactive "P")
+    (if (project-current)
+        (ghostel-project arg)
+      (ghostel arg)))
+  (global-set-key (kbd "C-c g") 'sanityinc/ghostel-dwim)
+  (add-hook 'after-init-hook 'ghostel-status-indicator-mode))
+
+
 
 (provide 'init-terminals)
 ;;; init-terminals.el ends here
