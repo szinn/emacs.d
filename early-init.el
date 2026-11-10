@@ -10,6 +10,12 @@
 
 (setq package-enable-at-startup nil)
 
+;; Emacs.app bundles libgccjit 14, which derives -mmacosx-version-min
+;; from the Darwin version (Darwin 27 -> "18.0"), and clang rejects it.
+;; Pass an explicit value so the driver doesn't compute its own.
+(require 'comp)
+(setq native-comp-driver-options (cons "-mmacosx-version-min=11" native-comp-driver-options))
+
 ;; So we can detect this having been loaded
 (provide 'early-init)
 
