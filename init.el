@@ -95,6 +95,7 @@
 
 (require 'init-compile)
 (require 'init-crontab)
+(require 'init-fish)
 ;; (require 'init-textile)
 (require 'init-markdown)
 ;; (require 'init-csv)
