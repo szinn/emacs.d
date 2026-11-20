@@ -89,13 +89,11 @@
 (require 'init-darcs)
 (require 'init-git)
 (require 'init-github)
-(require 'init-jj)
 
 (require 'init-projectile)
 
 (require 'init-compile)
 (require 'init-crontab)
-(require 'init-fish)
 ;; (require 'init-textile)
 (require 'init-markdown)
 ;; (require 'init-csv)

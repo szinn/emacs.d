@@ -1,4 +1,4 @@
-;;; init-fish.el --- Support for the fish shell -*- lexical-binding: t -*-
+;;; init-local-fish.el --- Support for the fish shell -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; Code:
 
@@ -14,5 +14,5 @@
                                    (string-suffix-p ".tmpl" buffer-file-name))))
                 (add-hook 'before-save-hook 'fish_indent-before-save nil t)))))
 
-(provide 'init-fish)
-;;; init-fish.el ends here
+(provide 'init-local-fish)
+;;; init-local-fish.el ends here

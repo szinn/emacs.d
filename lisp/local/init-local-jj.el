@@ -1,4 +1,4 @@
-;;; init-jj.el --- Jujutsu (jj) VCS support -*- lexical-binding: t -*-
+;;; init-local-jj.el --- Jujutsu (jj) VCS support -*- lexical-binding: t -*-
 ;;; Commentary:
 
 ;; jj-mode is not on MELPA, so install it straight from GitHub.
@@ -13,5 +13,5 @@
   (autoload 'jj-log "jj-mode" nil t)
   (global-set-key (kbd "C-x j") 'jj-log))
 
-(provide 'init-jj)
-;;; init-jj.el ends here
+(provide 'init-local-jj)
+;;; init-local-jj.el ends here
