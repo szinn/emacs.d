@@ -130,6 +130,13 @@ mise tool.")
   (add-hook 'yaml-mode-hook #'scotte/yaml-pro-maybe-enable))
 
 
+;;; Bookmarks
+
+;; Jump with completion and on-demand preview (M-P).
+(with-eval-after-load 'consult
+  (global-set-key [remap bookmark-jump] #'consult-bookmark))
+
+
 ;;; Scratch
 
 ;; *scratch* has no file, so Emacs 30+ treats it as untrusted and the
